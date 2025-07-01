@@ -1,0 +1,155 @@
+.about2-container {
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 80px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title {
+    color: #000000;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    letter-spacing: -1px;
+}
+
+.description2 {
+    color: #333333;
+    font-size: 25px;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.core-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.core-value-item {
+    background-color: transparent;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: #ff8c00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    transition: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+}
+
+.value-title {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.value-description {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about2-container {
+        padding: 60px 20px;
+    }
+
+    .main-title {
+        font-size: 60px;
+    }
+
+    .core-values-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about2-container {
+        padding: 50px 15px;
+    }
+
+    .main-title {
+        font-size: 48px;
+    }
+
+    .description {
+        font-size: 18px;
+        margin-bottom: 60px;
+    }
+
+    .core-values-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .core-value-item {
+        padding: 35px 25px;
+    }
+
+    .value-title {
+        font-size: 24px;
+    }
+
+    .icon-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .core-value-item {
+        padding: 30px 20px;
+    }
+
+    .value-title {
+        font-size: 22px;
+    }
+
+    .value-description {
+        font-size: 15px;
+    }
+}
