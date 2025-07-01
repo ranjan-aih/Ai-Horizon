@@ -34,6 +34,7 @@ import Navbar from "./components/common/Navbar";
 import { Route, Routes } from "react-router";
 import About from "./pages/About";
 import AppLayout from "./components/layout/AppLayout";
+import Partner from "./pages/Partner";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -46,6 +47,7 @@ function App() {
 
         {/* About page route */}
         <Route path="about" element={<About />} />
+        <Route path="partner" element={<Partner />} />
       </Route>
     </Routes>
   );

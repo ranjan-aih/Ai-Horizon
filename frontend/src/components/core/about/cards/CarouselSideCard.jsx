@@ -1,4 +1,5 @@
-import pattern from "../../../assets/pattern.svg"
+// import pattern from "../../../assets/pattern.svg"
+import pattern from "../../../../assets/pattern.svg";
 
 function CarouselSideCard({ data }) {
   return (
