@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MdOutlineArrowForward, MdOutlineArrowUpward } from 'react-icons/md';
-import { div } from 'framer-motion/client';
 
 const slideVariant = (direction) => ({
   animate: { x: 0, opacity: 1 },

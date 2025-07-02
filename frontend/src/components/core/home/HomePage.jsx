@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../css/HomePage.css';
 import TunnelSvg from '../../../assets/Tunnel.svg';
 
