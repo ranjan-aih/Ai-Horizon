@@ -6,7 +6,7 @@ import Blogs from '../components/core/home/Blogs';
 import HomePage from '../components/core/home/HomePage';
 // import Footer from "../components/common/Footer";
 import CloudPartners from '../components/core/home/CloudPartners';
-import TestBG from '../components/TestBg';
+// import TestBG from '../components/TestBg';
 
 const Home = () => {
   // const googleMapsApiKey = "AIzaSyAWpGF4YuL4EUS37-tUy0xOeldVIKkVnVY";
@@ -20,7 +20,7 @@ const Home = () => {
       <AIHStudio />
       <Blogs />
       {/* <Footer apiKey={googleMapsApiKey} /> */}
-      <TestBG />
+      {/* <TestBG /> */}
     </>
   );
 };

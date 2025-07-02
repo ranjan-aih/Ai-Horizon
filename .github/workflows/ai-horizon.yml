@@ -52,7 +52,7 @@ jobs:
         uses: trstringer/manual-approval@v1
         with:
           secret: ${{ secrets.GITHUB_TOKEN }}  
-          approvers: shivam-aih
+          approvers: ranjan-aih
           minimum-approvals: 1
           issue-title: "Deployment Approval Required"
           issue-body: "Please approve or deny the deployment."

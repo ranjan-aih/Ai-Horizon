@@ -4,15 +4,14 @@ import { MdOutlineArrowForward, MdOutlineArrowUpward } from 'react-icons/md';
 import { div } from 'framer-motion/client';
 
 const slideVariant = (direction) => ({
-  // initial: { x: direction === "left" ? -320 : 320, opacity: 0 },
   animate: { x: 0, opacity: 1 },
-  exit: { x: direction === 'left' ? 363 : -363, opacity: 0 },
-  transition: { duration: 0.9, ease: 'easeInOut' },
+  exit: { x: direction === 'left' ? 380 : -320 },
+  transition: { duration: 0.8, ease: 'easeInOut' },
 });
 
 const WhiteCard = ({ side, content, animation }) => (
   <motion.div
-    className={`absolute w-[316px] h-[405px] -translate-y-5 bg-white text-black rounded-[12px] shadow-lg flex justify-center items-center top-0 z-10 ${
+    className={`absolute w-[320px] h-[405px] -translate-y-5 bg-white text-black rounded-[12px] shadow-lg flex justify-center items-center top-0 z-10 ${
       side === 'left' ? 'left-0 translate-x-5' : 'right-0 -translate-x-5'
     }`}
     {...animation}
@@ -45,18 +44,22 @@ const BlackCard = ({
     {...animation}
   >
     <div className='flex flex-col h-full justify-center items-center py-5 gap-10 mb-20'>
-      <div className='flex justify-center flex-wrap border border-white rounded-[13px] w-[385px] h-[37px] gap-6 mb-4'>
-        {subTabs.map((item) => (
-          <button
-            key={item}
-            onClick={() => setActiveSubTab(item)}
-            className={`p-4 h-[35px] w-auto rounded-[10px] text-[16px] font-medium ${
-              activeSubTab === item ? 'bg-white text-black ' : 'text-white'
-            }`}
-          >
-            {item}
-          </button>
-        ))}
+      <div>
+        <div className='flex justify-center items-center gap-5 border border-white rounded-[13px] w-[370px] h-[37px]'>
+          {subTabs.map((item) => (
+            <button
+              key={item}
+              onClick={() => setActiveSubTab(item)}
+              className={`text-[16px] rounded-[12px] font-normal h-[34px] max-w-[100px]  transition-all duration-200 ${
+                activeSubTab === item
+                  ? 'bg-white text-black rounded-[10px] font-bold'
+                  : 'text-white'
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
       </div>
       <div className='w-[333px] h-[190px] flex flex-col justify-center gap-5'>
         {Array(4)
@@ -65,7 +68,7 @@ const BlackCard = ({
             <div key={index} className='flex flex-col gap-3 pt-3'>
               <div className='flex justify-between items-center'>
                 <span className='text-sm'>{text}</span>
-                <span className='text-lg rotate-[30deg]'>
+                <span className='text-lg rotate-[45deg]'>
                   <MdOutlineArrowUpward size={24} />
                 </span>
               </div>
