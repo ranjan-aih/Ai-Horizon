@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {motion} from "motion/react";
 
 function CoreCard(props) {
@@ -12,6 +13,11 @@ function CoreCard(props) {
       transition={{
         duration:0.5,
       }}
+=======
+function CoreCard(props) {
+  return props.data.map((item, index) => (
+    <div
+>>>>>>> e571f150a71fd7147665aea392d840dd48f69443
       key={index}
       className="w-[270px] h-[360px] border-[0.9px] rounded-[13.5px] bg-[#202020] text-white shadow-md flex flex-col items-center justify-center"
     >
@@ -23,7 +29,10 @@ function CoreCard(props) {
         {item.content}
       </div>
       </div>
+<<<<<<< HEAD
     </motion.div>
+=======
+>>>>>>> e571f150a71fd7147665aea392d840dd48f69443
     </div>
   ));
 }

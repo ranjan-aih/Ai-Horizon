@@ -34,17 +34,45 @@ const Footer = ({ apiKey }) => {
         <footer className="ft-footer">
             {/* Email & CTA */}
             <div className="ft-footer-top">
-                <form className="ft-email-container" onSubmit={handleSubmit}>
+                <form
+                    className="
+    !flex !items-center
+    !bg-[beige]
+    !rounded-[999px]
+    !py-[10px] !px-[20px]
+    !h-[60px]
+    !w-full !max-w-[450px]
+  "
+                    onSubmit={handleSubmit}
+                >
                     <input
                         type="email"
                         value={email}
                         onChange={handleEmailChange}
                         placeholder="Enter your Email ID"
-                        className="ft-email-input"
                         required
+                        className="
+      !bg-transparent !border-none !outline-none
+      !text-[#555555] !text-[15px]
+      !flex-1 !p-0 !h-full !mr-0
+      placeholder:!text-[#555555]
+    "
                     />
-                    <button type="submit" className="ft-submit-button">Submit</button>
+                    <button
+                        type="submit"
+                        className="
+      !bg-black !text-white !border-none
+      !rounded-[999px]
+      !py-[7px] !px-[14px]
+      !cursor-pointer
+      !text-[15px]
+      !whitespace-nowrap
+    "
+                    >
+                        Submit
+                    </button>
                 </form>
+
                 <h2 className="ft-footer-title">Build your own private GenAI Now!</h2>
             </div>
 
