@@ -1,7 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import TunnelSvg from "../../../assets/Tunnel.svg";
 
 const HomePage = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [email, setEmail] = useState('');
+
+    const handleButtonClick = () => {
+        setIsExpanded(true);
+    };
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
+
+    const handleSubmit = (e) => {
+        e?.preventDefault();
+        setIsExpanded(false);
+        setEmail('');
+    };
+
     return (<div className="
         min-h-screen bg-white flex items-center justify-center py-[40px] px-[20px] font-sans relative
         overflow-hidden">
@@ -38,17 +55,87 @@ const HomePage = () => {
                 builds secured, scalable, and customized agentic AI solutions that helps enterprises start their AI journey
             </p>
 
-            <button className="
-                !relative !bg-[#F6A11F] !text-white !border-none !py-[12px] !px-[24px] !text-[1.1rem] !font-medium
-                !rounded-[50px] !cursor-pointer !transition-all !duration-300 !ease-in-out
-                !shadow-[0_4px_15px_rgba(45,55,72,0.2)] !hover:bg-[#e59400] before:!content-[''] before:!absolute
-                before:!top-[-10px] before:!left-[-10px] before:!right-[-10px] before:!bottom-[-10px]
-                before:!bg-white before:!rounded-[60px] before:!-z-10
-                before:!shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.20),inset_5px_-8px_4px_0_rgba(0,0,0,0.05)]">
-                Book a Demo
-            </button>
+            <div className="flex justify-center">
+                <div className="relative">
+                    {/* Single container that morphs */}
+                    <div className="
+                        !relative !overflow-hidden !cursor-pointer !transition-all !duration-[595ms]
+                        !ease-in-out !rounded-[50px] !shadow-[0_4px_15px_rgba(45,55,72,0.2)]"
+
+                        style={{
+                            width: isExpanded ? '450px' : '160px',
+                            height: '60px',
+                            backgroundColor: isExpanded ? '#E4FFFF' : '#F6A11F',
+                        }}
+                        onClick={!isExpanded ? handleButtonClick : undefined}>
+
+                        {/* White border effect - only visible when not expanded */}
+                        <div className="
+                            !absolute !top-[-10px] !left-[-10px] !right-[-10px] !bottom-[-10px]
+                            !bg-white !rounded-[60px] !-z-10 !transition-opacity !duration-[255ms] !ease-in-out"
+
+                            style={{
+                                opacity: isExpanded ? 0 : 1,
+                                transitionDelay: isExpanded ? '0s' : '0.3s',
+                                boxShadow: 'inset 0 4px 4px 0 rgba(0,0,0,0.20), inset 5px -8px 4px 0 rgba(0,0,0,0.05)'
+                            }}
+                        />
+
+                        {/* Button text - fades out when expanding */}
+                        <div className="
+                            !absolute !inset-0 !flex !items-center !justify-center !text-white !text-[1.1rem]
+                            !font-medium !transition-opacity !duration-[255ms] !ease-in-out"
+
+                            style={{
+                                opacity: isExpanded ? 0 : 1,
+                                pointerEvents: isExpanded ? 'none' : 'auto'
+                            }}
+                        >
+                            Book a Demo
+                        </div>
+
+                        {/* Form - fades in when expanded */}
+                        <div className="
+                            !absolute !inset-0 !flex !items-center !py-[10px] !px-[20px]
+                            !transition-opacity !duration-[255ms] !ease-in-out"
+
+                            style={{
+                                opacity: isExpanded ? 1 : 0,
+                                transitionDelay: isExpanded ? '425ms' : '0s',
+                                pointerEvents: isExpanded ? 'auto' : 'none'
+                            }}>
+
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={handleEmailChange}
+                                placeholder="Enter your Email ID"
+                                required
+                                className="
+                                    !bg-transparent !border-none !outline-none !text-[#555555] !text-[15px]
+                                    !flex-1 !p-0 !h-full !mr-2 placeholder:!text-[#555555]"
+
+                                onClick={(e) => e.stopPropagation()}
+                            />
+
+                            <button
+                                type="button"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleSubmit(e);
+                                }}
+                                className="
+                                    !bg-black !text-white !border-none !rounded-[999px] !py-[7px] !px-[14px]
+                                    !cursor-pointer !text-[15px] !whitespace-nowrap hover:!bg-gray-800
+                                    !transition-colors !duration-200">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>);
-};
+}
 
 export default HomePage;
