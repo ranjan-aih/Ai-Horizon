@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import "../../../css/ThankYou.css";
 
 const ThankYou = () => {
     const [countdown, setCountdown] = useState(5);
@@ -35,9 +34,30 @@ const ThankYou = () => {
                     Our Team will contact you soon!
                 </h2>
 
-                <button className="return-button" onClick={handleReturnHome}>
-                    Return to Homepage
+                <button
+                    className="
+    !relative
+    !bg-[#F6A11F] !text-white !border-none
+    !py-[12px] !px-[24px]
+    !text-[1.1rem] !font-medium
+    !rounded-[50px]
+    !cursor-pointer
+    !transition-all !duration-300 !ease-in-out
+    !shadow-[0_4px_15px_rgba(45,55,72,0.2)]
+    !hover:bg-[#e59400]
+    !mb-[30px]
+
+    before:!content-[''] before:!absolute
+    before:!top-[-10px] before:!left-[-10px]
+    before:!right-[-10px] before:!bottom-[-10px]
+    before:!bg-white before:!rounded-[60px]
+    before:!-z-10
+    before:!shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.20),inset_5px_-8px_4px_0_rgba(0,0,0,0.05)]
+  "
+                    onClick={handleReturnHome}>
+                    Return to homepage
                 </button>
+
 
                 <p className="text-base text-gray-600 m-0 font-normal">
                     You will be automatically redirected to home page in {countdown} sec.

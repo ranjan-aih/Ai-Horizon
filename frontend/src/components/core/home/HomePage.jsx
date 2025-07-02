@@ -1,5 +1,4 @@
 import React from "react";
-import "../../../css/HomePage.css";
 import TunnelSvg from "../../../assets/Tunnel.svg";
 
 const HomePage = () => {
@@ -58,15 +57,36 @@ const HomePage = () => {
             </h1>
 
             <p className="!text-[1.25rem] !text-[#4a4a4a] !leading-[1.6] !mx-auto !mt-0 !mb-[4rem] !font-normal !max-w-[600px]">
-
-                <span className="ai-text">ai-</span>
-                <span className="horizon-text">horizon</span>
-                <span className="io-text">.io</span> builds secured, scalable, and
+                <span className="text-teal-500 text-[1.1em] tracking-[1px] font-normal">ai-</span>
+                <span className="text-[#FFAC1C] text-[1.1em] tracking-[1px] font-normal">horizon</span>
+                <span className="text-teal-500 text-[1.1em] tracking-[1px] font-normal">.io</span> builds secured, scalable, and
                 customized agentic AI solutions that helps enterprises start their AI
                 journey
             </p>
 
-            <button className="cta-button">Book a Demo</button>
+            <button
+                className="
+    !relative
+    !bg-[#F6A11F] !text-white !border-none
+    !py-[12px] !px-[24px]
+    !text-[1.1rem] !font-medium
+    !rounded-[50px]
+    !cursor-pointer
+    !transition-all !duration-300 !ease-in-out
+    !shadow-[0_4px_15px_rgba(45,55,72,0.2)]
+    !hover:bg-[#e59400]
+
+    before:!content-[''] before:!absolute
+    before:!top-[-10px] before:!left-[-10px]
+    before:!right-[-10px] before:!bottom-[-10px]
+    before:!bg-white before:!rounded-[60px]
+    before:!-z-10
+    before:!shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.20),inset_5px_-8px_4px_0_rgba(0,0,0,0.05)]
+  "
+            >
+                Book a Demo
+            </button>
+
         </div>
     </div>);
 };
