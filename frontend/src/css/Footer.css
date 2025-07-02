@@ -1,0 +1,345 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure html and body take full width */
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Ensure root div spans full width */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Black Background */
+.ft-footer {
+  background-color: #202020;
+  width: 100%;
+  min-height: 100vh; /* Changed to min-height for better responsiveness */
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden; /* Prevent content overflow */
+}
+
+/* Title + Email button - Made responsive */
+.ft-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px clamp(20px, 5vw, 100px); /* Responsive padding */
+  gap: 25px;
+  position: relative;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.ft-email-container {
+  display: flex;
+  align-items: center;
+  background-color: beige;
+  border-radius: 999px;
+  padding: 10px 20px;
+  height: 60px;
+  width: min(450px, 100%); /* Responsive width */
+  max-width: 450px;
+}
+
+.ft-email-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #555;
+  font-size: 15px;
+  flex: 1;
+  padding: 0;
+  height: 100%;
+  margin-right: 0;
+}
+
+.ft-email-input::placeholder {
+  color: #555;
+}
+
+.ft-submit-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-size: 15px;
+  white-space: nowrap; /* Prevent button text wrapping */
+}
+
+.ft-footer-title {
+  color: #fff;
+  font-size: clamp(24px, 4vw, 45px); /* Responsive font size */
+  margin: 0;
+}
+
+/* White line below the title and at the bottom - Made responsive */
+.ft-footer-top::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: clamp(20px, 5vw, 50px); /* Responsive spacing */
+  right: clamp(20px, 5vw, 50px);
+  height: 1px;
+  background-color: #fff;
+}
+
+.ft-footer::before {
+  content: "";
+  position: absolute;
+  bottom: 70px;
+  left: clamp(20px, 5vw, 50px);
+  right: clamp(20px, 5vw, 50px);
+  height: 1px;
+  background-color: #fff;
+}
+
+/* Breadcrumb section - Made responsive */
+.ft-breadcrumb-section {
+  position: absolute;
+  top: 140px;
+  left: clamp(20px, 6vw, 70px);
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.ft-breadcrumb-icon {
+  font-size: 18px;
+  margin-right: 15px;
+  transform: rotate(-45deg);
+}
+
+.ft-breadcrumb-text {
+  font-size: 15px;
+}
+
+/* Quick Links title - Made responsive */
+.ft-quick-links-title {
+  position: absolute;
+  top: 200px;
+  left: clamp(40px, 10vw, 120px); /* Responsive positioning */
+  color: #f6a11f;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Links grid - Made responsive */
+.ft-links-grid {
+  position: absolute;
+  top: 250px;
+  left: clamp(40px, 10vw, 120px);
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 75px;
+  color: #fff;
+  width: fit-content; /* Only take up the space needed */
+}
+
+.ft-links-column {
+  display: flex;
+  flex-direction: column;
+  width: max-content; /* Only take up space needed for content */
+  margin-right: 50px; /* Set to exactly 50px spacing */
+}
+
+.ft-links-column:last-child {
+  margin-right: 0; /* Remove margin from last column */
+}
+
+.ft-column-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.ft-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ft-links-list li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.ft-links-list li:hover {
+  color: #fff;
+}
+
+.ft-links-list li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ft-links-list li a:hover {
+  color: #fff;
+}
+
+/* Logo container - Made responsive */
+.ft-logo-container {
+  position: absolute;
+  top: 525px;
+  left: clamp(60px, 20vw, 250px); /* Responsive positioning */
+  margin-top: 30px;
+}
+
+.ft-ai-logo {
+  max-width: min(180px, 40vw); /* Responsive logo size */
+  height: auto;
+}
+
+/* Vertical line - Made responsive */
+.ft-links-grid::after {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: clamp(-70px, -12vw, -100px);
+  width: 1px;
+  height: 475px;
+  background-color: #fff;
+}
+
+/* Map container - Made responsive */
+.ft-map-container {
+  position: absolute;
+  top: 175px;
+  right: clamp(9px, 9vw, 142px); /* Responsive positioning */
+  width: min(400px, 38vw); /* Responsive width */
+  height: 300px;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Contact section - Made responsive */
+.ft-contact-section {
+  position: absolute;
+  top: 500px;
+  right: clamp(25px, 14vw, 190px); /* Responsive positioning */
+  text-align: center;
+  color: #fff;
+  max-width: 300px; /* Prevent text overflow */
+}
+
+.ft-contact-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f6a11F;
+  margin-bottom: 15px;
+}
+
+.ft-contact-address {
+  font-size: 17px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.ft-linkedin-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: #0077b5;
+  transition: transform 0.2s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.ft-linkedin-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Footer text - Made responsive */
+.ft-footer-bottom-text {
+  position: absolute;
+  bottom: 30px;
+  right: clamp(20px, 5vw, 50px); /* Responsive positioning */
+  color: #fff;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.ft-footer-bottom-text .ft-footer-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ft-footer-bottom-text .ft-footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .ft-footer-top {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .ft-email-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .ft-footer-title {
+    order: -1; /* Move title above email on mobile */
+  }
+
+  .ft-links-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 30px;
+  }
+
+  .ft-map-container {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    right: auto;
+    top: auto;
+  }
+
+  .ft-contact-section {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .ft-logo-container {
+    position: relative;
+    left: auto;
+    top: auto;
+    text-align: center;
+    margin: 30px auto;
+  }
+
+  .ft-footer-bottom-text {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    text-align: center;
+    margin: 30px 20px 20px;
+  }
+}
