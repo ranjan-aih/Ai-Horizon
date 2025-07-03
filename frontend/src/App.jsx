@@ -25,8 +25,6 @@
 // }
 
 // export default App;
-
-import { useState } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import Footer from "./components/common/Footer";
@@ -37,7 +35,6 @@ import AppLayout from "./components/layout/AppLayout";
 import Partner from "./pages/Partner";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <Routes>
