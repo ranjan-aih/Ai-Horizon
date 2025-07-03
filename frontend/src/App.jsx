@@ -1,30 +1,4 @@
-// import { useState } from "react";
-// import "./App.css";
-// import Home from "./pages/Home";
-// import Footer from "./components/common/Footer";
-// import Navbar from "./components/common/Navbar";
-// import { Route, Routes } from "react-router";
-// import About from "./pages/About";
-// import AppLayout from "./components/layout/AppLayout";
 
-// function App() {
-//   const [count, setCount] = useState(0);
-
-//   const googleMapsApiKey = "AIzaSyAWpGF4YuL4EUS37-tUy0xOeldVIKkVnVY";
-
-//   return (
-//     <>
-//       <Routes>
-//         <Route path="/" element={<AppLayout />}>
-//           <Route path="about" element={<About />} />
-//         </Route>
-
-//       </Routes>
-//     </>
-//   );
-// }
-
-// export default App;
 
 import { useState } from "react";
 import "./App.css";
