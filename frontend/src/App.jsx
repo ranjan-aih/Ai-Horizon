@@ -53,7 +53,4 @@ function App() {
   );
 }
 
-
-// thththth44444
-
 export default App;
