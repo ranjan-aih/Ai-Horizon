@@ -4,13 +4,13 @@ import { MdOutlineArrowForward, MdOutlineArrowUpward } from 'react-icons/md';
 
 const slideVariant = (direction) => ({
   animate: { x: 0, opacity: 1 },
-  exit: { x: direction === 'left' ? 380 : -320 },
+  exit: { x: direction === 'left' ? 350 : -350 },
   transition: { duration: 0.8, ease: 'easeInOut' },
 });
 
 const WhiteCard = ({ side, content, animation }) => (
   <motion.div
-    className={`absolute w-[320px] h-[405px] -translate-y-5 bg-white text-black rounded-[12px] shadow-lg flex justify-center items-center top-0 z-10 ${
+    className={`absolute w-[350px] h-[405px] -translate-y-5 bg-[#FFFFFF] text-[#000000] rounded-[12px] shadow-lg flex justify-center items-center top-0 z-10 ${
       side === 'left' ? 'left-0 translate-x-5' : 'right-0 -translate-x-5'
     }`}
     {...animation}
@@ -38,21 +38,21 @@ const BlackCard = ({
 }) => (
   <motion.div
     className={`absolute top-0 h-full p-5 z-10 ${
-      side === 'left' ? 'left-0 w-[385px]' : 'right-0 w-[435px]'
+      side === 'left' ? 'left-0 translate-x-5' : 'right-0 -translate-x-5'
     }`}
     {...animation}
   >
     <div className='flex flex-col h-full justify-center items-center py-5 gap-10 mb-20'>
       <div>
-        <div className='flex justify-center items-center gap-5 border border-white rounded-[13px] w-[370px] h-[37px]'>
+        <div className='flex justify-center items-center gap-5 border border-[#FFFFFF] rounded-[13px] w-[350px] h-[37px]'>
           {subTabs.map((item) => (
             <button
               key={item}
               onClick={() => setActiveSubTab(item)}
               className={`text-[16px] rounded-[12px] font-normal h-[34px] max-w-[100px]  transition-all duration-200 ${
                 activeSubTab === item
-                  ? 'bg-white text-black rounded-[10px] font-bold'
-                  : 'text-white'
+                  ? 'bg-[#FFFFFF] text-[#000000] rounded-[10px] font-bold'
+                  : 'text-[#FFFFFF]'
               }`}
             >
               {item}
@@ -71,7 +71,7 @@ const BlackCard = ({
                   <MdOutlineArrowUpward size={24} />
                 </span>
               </div>
-              <div className='border-b-2 border-[#FFFFFF]'></div>
+              <div className='border-b-[1px] border-[#FFFFFF]'></div>
             </div>
           ))}
       </div>
@@ -102,16 +102,16 @@ const AIHAgentTab = () => {
   const isFunction = activeTab === 'FUNCTION';
 
   return (
-    <div className='flex items-center justify-center px-4 py-10 text-white font-sans w-[765px] h-[472px] relative'>
+    <div className='flex items-center justify-center px-4 py-10 text-[#FFFFFF] font-sans w-[765px] h-[472px] relative'>
       {/* Top Tabs */}
-      <div className='absolute -top-12 left-1/2 -translate-x-1/2 w-[530px] h-[38px] flex border-2 border-white rounded-xl overflow-hidden z-20'>
+      <div className='absolute -top-12 left-1/2 -translate-x-1/2 w-[530px] h-[38px] flex border-2 border-[#FFFFFF] rounded-xl overflow-hidden z-20'>
         {['FUNCTION', 'INDUSTRY'].map((tab) => (
           <button
             key={tab}
             className={`w-1/2 px-8 py-2 text-sm font-semibold transition-all duration-300 ${
               activeTab === tab
-                ? 'bg-gradient-to-r from-[#F6A11F] to-[#17BCBC] text-black'
-                : 'text-white'
+                ? 'bg-gradient-to-r from-[#F6A11F] to-[#17BCBC] text-[#000000]'
+                : 'text-[#FFFFFF]'
             }`}
             onClick={() => {
               setActiveTab(tab);
@@ -124,7 +124,7 @@ const AIHAgentTab = () => {
       </div>
 
       {/* Content Wrapper */}
-      <div className='relative w-[765px] h-[365px] bg-[#000000] border-[1px] border-white mt-10 rounded-[12px] flex'>
+      <div className='relative w-[760px] h-[365px] bg-[#000000] border-[1px] border-[#FFFFFF] mt-10 rounded-[12px] flex'>
         <AnimatePresence mode='wait'>
           <WhiteCard
             key={`white-${activeTab}`}
