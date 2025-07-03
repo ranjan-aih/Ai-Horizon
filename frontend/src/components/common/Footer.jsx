@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "../../css/Footer.css";
+import { useState} from "react";
 import { GiSpinningTop } from "react-icons/gi";
 import aih_logo from "../../assets/aih_logo.png";
 import { Map, Marker, APIProvider } from "@vis.gl/react-google-maps";
@@ -32,7 +31,7 @@ const Footer = ({ apiKey }) => {
 
     return (
         <footer className="
-            bg-[#202020] w-full min-h-screen m-0 p-0 relative overflow-x-hidden before:content-[''] 
+            bg-[#202020] w-full min-h-screen m-0 p-0 relative !overflow-x-hidden before:content-['']
             before:absolute before:bottom-[70px] before:left-[clamp(20px,5vw,50px)] before:right-[clamp(20px,5vw,50px)]
             before:h-px before:bg-white">
 
@@ -41,8 +40,8 @@ const Footer = ({ apiKey }) => {
                     flex justify-between items-center flex-wrap relative gap-[25px] !py-[20px]
                     !px-[clamp(20px,5vw,100px)]
                     after:content-[''] after:absolute after:-bottom-[10px] after:left-[clamp(20px,5vw,50px)]
-                    after:right-[clamp(20px,5vw,50px)] after:h-px after:bg-white">
-
+                    after:right-[clamp(20px,5vw,50px)] after:h-px after:bg-white"
+            >
                 <form className="
                     !flex !items-center !bg-[beige] !rounded-[999px] !py-[10px] !px-[20px] !h-[60px]
                     !w-full !max-w-[450px]"
