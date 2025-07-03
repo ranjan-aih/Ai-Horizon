@@ -16,7 +16,7 @@ const WhiteCard = ({ side, content, animation }) => (
     {...animation}
   >
     <div className='flex flex-col justify-between items-center w-[245px] h-[265px]'>
-      <div className=' mb-20'>
+      <div className=''>
         <h2 className='text-[46px] font-medium'>{content.title}</h2>
       </div>
       <div className='w-[273px] h-[140px] text-center font-normal text-[14px] leading-relaxed'>
@@ -37,7 +37,7 @@ const BlackCard = ({
   animation,
 }) => (
   <motion.div
-    className={`absolute top-0 h-full p-5 z-10 ${
+    className={`absolute top-0 w-[350px] p-5 z-10 ${
       side === 'left' ? 'left-0 translate-x-5' : 'right-0 -translate-x-5'
     }`}
     {...animation}
@@ -60,7 +60,7 @@ const BlackCard = ({
           ))}
         </div>
       </div>
-      <div className='w-[333px] h-[190px] flex flex-col justify-center gap-5'>
+      <div className='w-[330px] h-[190px] flex flex-col justify-center'>
         {Array(4)
           .fill('LOREM IPSUM')
           .map((text, index) => (
@@ -124,7 +124,7 @@ const AIHAgentTab = () => {
       </div>
 
       {/* Content Wrapper */}
-      <div className='relative w-[760px] h-[365px] bg-[#000000] border-[1px] border-[#FFFFFF] mt-10 rounded-[12px] flex'>
+      <div className='relative w-[765px] h-[365px] bg-[#000000] border-[1px] border-[#FFFFFF] rounded-[12px] flex justify-between gap-5'>
         <AnimatePresence mode='wait'>
           <WhiteCard
             key={`white-${activeTab}`}

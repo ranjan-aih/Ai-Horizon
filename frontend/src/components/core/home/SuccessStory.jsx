@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from "react";
-import SuccessStoryCard from "./cards/SuccessStoryCard";
-import { FiUser } from "react-icons/fi";
-import { FiDollarSign } from "react-icons/fi";
-import { IoFlashSharp } from "react-icons/io5";
-import { BiBox } from "react-icons/bi";
+import React, { useState, useEffect } from 'react';
+import SuccessStoryCard from './cards/SuccessStoryCard';
+import { FiUser } from 'react-icons/fi';
+import { FiDollarSign } from 'react-icons/fi';
+import { IoFlashSharp } from 'react-icons/io5';
+import { BiBox } from 'react-icons/bi';
 
 const successData = [
   {
-    count: "1000+",
-    label: "Enterprise users leveraging our AI agents",
+    count: '1000+',
+    label: 'Enterprise users leveraging our AI agents',
     icon: FiUser,
   },
   {
-    count: "100+",
-    label: "Tailor-made Agentic AI agents deployed",
+    count: '100+',
+    label: 'Tailor-made Agentic AI agents deployed',
     icon: BiBox,
   },
   {
-    count: "10 Million+",
-    label: "Cost savings achieved for enterprise clients",
+    count: '10 Million+',
+    label: 'Cost savings achieved for enterprise clients',
     icon: FiDollarSign,
   },
   {
-    count: "10,000+",
-    label: "Reasoning tasks solved daily by our agents",
+    count: '10,000+',
+    label: 'Reasoning tasks solved daily by our agents',
     icon: IoFlashSharp,
   },
 ];
@@ -40,25 +40,38 @@ const SuccessStory = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="w-[1024px] h-[832px] flex justify-between items-center">
-        <div className="flex flex-col justify-center items-start gap-2.5">
-          <div className="w-[65px] h-[6px] rounded items-start bg-gradient-to-r from-[#F6A11F] to-[#AD10FF]"></div>
-          <div className="w-[430px] text-black font-medium text-[51px]">
+    <div className='flex justify-center items-center'>
+      <div className='w-[1024px] h-[832px] flex justify-between items-center'>
+        <div className='flex flex-col justify-center items-start gap-2.5'>
+          <div className='w-[65px] h-[6px] rounded items-start bg-gradient-to-r from-[#F6A11F] to-[#AD10FF]'></div>
+          <div className='w-[430px] text-black font-medium text-[51px]'>
             <h1>OUR SUCCESS STORIES</h1>
           </div>
-          <div className="w-[430px] h-[140px] text-black  font-normal text-2xl">
-            we have many songs and stories to tell just be with us we have many
-            songs and stories to tell just be with us we have many songs and
-            stories to tell just be with us
+          <div className='w-[430px] h-[140px] text-black  font-normal text-2xl'>
+            At{' '}
+            <span className='text-[#15bcbd] text-[1.1em] tracking-[1px] font-normal'>
+              ai-
+            </span>
+            <span className='text-[#F6a120] text-[1.1em] tracking-[1px] font-normal'>
+              horizon
+            </span>
+            <span className='text-[#15bcbd] text-[1.1em] tracking-[1px] font-normal'>
+              .io
+            </span>
+            , we design and deploy custom AI agents that enable enterprises to
+            become truly AI-ready. These intelligent agents are built to
+            streamline operations, enhance decision-making, and deliver
+            measurable business impact. Our advanced Agentic AI technology
+            ensures our clients stay ahead in an increasingly competitive
+            digital landscape.
           </div>
         </div>
 
-        <div className="border border-[border-[#B3B3B3] rounded-[31px] -rotate-12 ">
-          <div className="border border-[border-[#B3B3B3] rounded-[31px] -rotate-12 ">
-            <div className="border border-[border-[#B3B3B3] rounded-[31px] -rotate-12 ">
-              <div className="border border-[border-[#B3B3B3] rounded-[31px] -rotate-12 ">
-                <span className="rotate-0">
+        <div className='border border-[border-[#B3B3B3] rounded-[31px] -rotate-12 '>
+          <div className='border border-[border-[#B3B3B3] rounded-[31px] -rotate-12 '>
+            <div className='border border-[border-[#B3B3B3] rounded-[31px] -rotate-12 '>
+              <div className='border border-[border-[#B3B3B3] rounded-[31px] -rotate-12 '>
+                <span className='rotate-0'>
                   <SuccessStoryCard {...successData[currentIndex]} />
                 </span>
               </div>
