@@ -35,7 +35,7 @@ function AboutUsSectionThree() {
         </div>
 
         {/* Cards Section */}
-        <div className='flex flex-wrap justify-center gap-[58px] sm:gap-[60px] sm:w-[930px] sm:h-[360px] w-[270px] h-[1200px]'>
+        <div className='flex flex-wrap justify-between sm:gap-[60px] sm:w-[1024px] sm:h-[360px] w-[270px] h-[1200px]'>
           <CoreCard data={data} />
         </div>
       </div>
