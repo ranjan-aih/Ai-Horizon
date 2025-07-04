@@ -82,7 +82,8 @@ jobs:
           git pull https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/shivam-aih/ai-horizon.git main
           cd frontend
           npm install
-          npm run build
+          npm run build 
+          
        
           if [ -d "server" ]; then
             cd server
