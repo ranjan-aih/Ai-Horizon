@@ -83,12 +83,12 @@ const Footer = ({ apiKey }) => {
             </div>
 
             {/* Quick Links Section */}
-            <div className="fixed top-[25vh] left-12 text-[#f6a11f] text-[20px] font-bold xl:left-30">
+            <div className="absolute top-[25vh] left-12 text-[#f6a11f] text-[20px] font-bold xl:left-30">
                 Quick Links
             </div>
 
             <div className="
-                fixed top-[32vh] left-12 grid grid-cols-[repeat(3,max-content)] gap-[75px] text-white w-max xl:left-30
+                absolute top-[32vh] left-12 grid grid-cols-[repeat(3,max-content)] gap-[75px] text-white w-max xl:left-30
 
                 /* vertical line */
                 after:content-[''] after:absolute after:top-[-70px] after:right-[-85px]
@@ -171,13 +171,13 @@ const Footer = ({ apiKey }) => {
             </div>
 
             {/* Logo */}
-            <div className="fixed top-[68vh] left-20 mt-[30px] xl:left-72">
+            <div className="absolute top-[68vh] left-20 mt-[30px] xl:left-72">
                 <img src={aih_logo} alt="AIH Logo" className="w-[180px] h-auto" />
             </div>
 
             {/* Map Section */}
             <div className="
-                fixed top-[23vh] right-28 w-[400px] h-[300px] bg-[#1a1a1a]
+                absolute top-[23vh] right-28 w-[400px] h-[300px] bg-[#1a1a1a]
                 cursor-pointer transition-all duration-300 ease-in-out border border-[#333] rounded-[15px]
                 overflow-hidden xl:right-30"
 
@@ -202,7 +202,7 @@ const Footer = ({ apiKey }) => {
                 </APIProvider>
             </div>
 
-            <div className="fixed top-[65vh] right-28 text-center text-white max-w-[300px] xl:right-42">
+            <div className="absolute top-[65vh] right-28 text-center text-white max-w-[300px] xl:right-42">
                 <h3 className="text-[20px] font-bold text-[#f6a11F] !mb-[15px]">Contact</h3>
 
                 <p className="text-[17px] leading-[1.4] !mb-[15px] text-[#ccc]">
@@ -221,7 +221,7 @@ const Footer = ({ apiKey }) => {
             </div>
 
             {/* Bottom Links */}
-            <div className="fixed bottom-8 right-8 text-white text-[15px] opacity-80 xl:right-12 2xl:right-16">
+            <div className="absolute bottom-8 right-8 text-white text-[15px] opacity-80 xl:right-12 2xl:right-16">
                 <a href="/privacy" className="ft-footer-link">Privacy Policy</a>
                 {" "}|{" "}
                 <a href="/terms" className="ft-footer-link">Terms and Conditions</a>
