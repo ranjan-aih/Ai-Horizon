@@ -1,0 +1,21 @@
+[33m2efcf79[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m2efcf79[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{1}: pull origin Rishabh: Merge made by the 'ort' strategy.
+[33m364d5c7[m HEAD@{2}: commit: fix: AIAgents and AIStudio
+[33md5b0df7[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{3}: commit: test cicd
+[33m700a9fb[m HEAD@{4}: commit (merge): added: atharva branch
+[33m2ab8da5[m HEAD@{5}: commit: fix: aih
+[33m05d022e[m HEAD@{6}: pull origin Rishabh: Fast-forward
+[33m458d2c7[m HEAD@{7}: commit (merge): merge Rishabh
+[33mfc31bf6[m HEAD@{8}: commit: fix: Ai-Agents
+[33m8650c6d[m HEAD@{9}: commit (merge): adding rishabh
+[33mbda43d0[m HEAD@{10}: commit: test: git
+[33mdef74ad[m HEAD@{11}: commit: fixing git changes
+[33me4d6c22[m HEAD@{12}: commit (merge): change in about1 and css
+[33m02e44f6[m HEAD@{13}: commit (merge): adding Atharva-dev branch
+[33m4d1dd26[m HEAD@{14}: commit (merge): adding Rishabh branch
+[33mb0cf4ab[m HEAD@{15}: commit: Local changes before merging feature/Rishabh
+[33m4d1aec2[m HEAD@{16}: reset: moving to HEAD
+[33m4d1aec2[m HEAD@{17}: commit: changing index.html
+[33medf20bf[m HEAD@{18}: commit: added cicd
+[33mfd26785[m HEAD@{19}: commit: testing
+[33m4afa811[m HEAD@{20}: commit (initial): new commit
