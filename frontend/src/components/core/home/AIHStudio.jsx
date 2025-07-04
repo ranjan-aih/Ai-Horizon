@@ -43,13 +43,13 @@ const AIHStudio = () => {
   return (
     <div className='flex justify-center items-center'>
       {/* <div className='border-4 border-black'> */}
-      <div className='relative w-[1280px] h-[832px] bg-white border-2 border-amber-300'>
+      <div className='relative w-[1280px] h-[832px] bg-[#FFFFFF]'>
         {/* Background Vertical Lines */}
         <div className='absolute inset-0 z-0 mr-24'>
           {[...Array(9)].map((_, i) => (
             <div
               key={i}
-              className='border-l border-gray-300'
+              className='border-l border-[#FFFFFF]'
               style={{
                 position: 'absolute',
                 top: '12px',
@@ -64,7 +64,7 @@ const AIHStudio = () => {
         </div>
 
         {/* Main Content */}
-        <div className='relative z-10 flex flex-col md:flex-row gap-32 w-[1280px] h-[832px] items-center justify-center border-2 border-red-500  pr-50'>
+        <div className='relative z-10 flex flex-col md:flex-row gap-32 w-[1280px] h-[832px] items-center justify-center  pr-50'>
           <div className='flex gap-6 w-full md:w-[600px] ml-6'>
             {[0, 1, 2].map((colIdx) => (
               <div
