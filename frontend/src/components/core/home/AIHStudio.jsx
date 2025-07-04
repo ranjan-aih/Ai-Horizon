@@ -49,7 +49,7 @@ const AIHStudio = () => {
           {[...Array(9)].map((_, i) => (
             <div
               key={i}
-              className='border-l border-[#FFFFFF]'
+              className='border-l border-gray-300'
               style={{
                 position: 'absolute',
                 top: '12px',
