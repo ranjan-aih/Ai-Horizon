@@ -10,7 +10,7 @@ const slideVariant = (direction) => ({
 
 const WhiteCard = ({ side, content, animation }) => (
   <motion.div
-    className={`absolute w-[350px] h-[405px] -translate-y-5 bg-[#FFFFFF] text-[#000000] rounded-[12px] shadow-lg flex justify-center items-center top-0 z-10 ${
+    className={`absolute w-[330px] h-[405px]  -translate-y-5 bg-[#FFFFFF] text-[#000000] rounded-[12px] shadow-lg flex justify-center items-center top-0 z-10 ${
       side === 'left' ? 'left-0 translate-x-5' : 'right-0 -translate-x-5'
     }`}
     {...animation}
@@ -37,30 +37,30 @@ const BlackCard = ({
   animation,
 }) => (
   <motion.div
-    className={`absolute top-0 w-[350px] p-5 z-10 ${
+    className={`absolute top-0 w-[330px] flex justify-center overflow-hidden h-[365px] z-10 ${
       side === 'left' ? 'left-0 translate-x-5' : 'right-0 -translate-x-5'
     }`}
     {...animation}
   >
-    <div className='flex flex-col h-full justify-center items-center py-5 gap-10 mb-20'>
-      <div>
-        <div className='flex justify-center items-center gap-5 border border-[#FFFFFF] rounded-[13px] w-[350px] h-[37px]'>
-          {subTabs.map((item) => (
-            <button
-              key={item}
-              onClick={() => setActiveSubTab(item)}
-              className={`text-[16px] rounded-[12px] font-normal h-[34px] max-w-[100px]  transition-all duration-200 ${
-                activeSubTab === item
-                  ? 'bg-[#FFFFFF] text-[#000000] rounded-[10px] font-bold'
-                  : 'text-[#FFFFFF]'
-              }`}
-            >
-              {item}
-            </button>
-          ))}
-        </div>
+    <div className='flex flex-col w-full h-full justify-center items-center py-5 gap-10 mb-20'>
+      {/* <div> */}
+      <div className='flex justify-evenly items-center border border-[#FFFFFF] rounded-[13px] w-full h-[37px]'>
+        {subTabs.map((item) => (
+          <button
+            key={item}
+            onClick={() => setActiveSubTab(item)}
+            className={`text-[16px] rounded-[12px] font-normal h-[34px] max-w-[100px]  transition-all duration-200 ${
+              activeSubTab === item
+                ? 'bg-[#FFFFFF] text-[#000000] rounded-[10px] font-bold'
+                : 'text-[#FFFFFF]'
+            }`}
+          >
+            {item}
+          </button>
+        ))}
       </div>
-      <div className='w-[330px] h-[190px] flex flex-col justify-center'>
+      {/* </div> */}
+      <div className='w-[300px] h-[190px] flex flex-col justify-center'>
         {Array(4)
           .fill('LOREM IPSUM')
           .map((text, index) => (
@@ -124,26 +124,29 @@ const AIHAgentTab = () => {
       </div>
 
       {/* Content Wrapper */}
-      <div className='relative w-[765px] h-[365px] bg-[#000000] border-[1px] border-[#FFFFFF] rounded-[12px] flex justify-between gap-5'>
-        <AnimatePresence mode='wait'>
-          <WhiteCard
-            key={`white-${activeTab}`}
-            side={isFunction ? 'left' : 'right'}
-            content={infoContent[activeTab]}
-            animation={slideVariant(isFunction ? 'left' : 'right')}
-          />
-        </AnimatePresence>
 
-        <AnimatePresence mode='wait'>
-          <BlackCard
-            key={`black-${activeTab}`}
-            side={isFunction ? 'right' : 'left'}
-            subTabs={subTabs[activeTab]}
-            activeSubTab={activeSubTab}
-            setActiveSubTab={setActiveSubTab}
-            animation={slideVariant(isFunction ? 'right' : 'left')}
-          />
-        </AnimatePresence>
+      <div className='relative w-[765px] h-[365px] bg-[#000000] border-[1px] border-[#FFFFFF] rounded-[12px] flex justify-center '>
+        <div className='w-[700px] h-[365px] flex justify-between items-center'>
+          <AnimatePresence mode='wait'>
+            <WhiteCard
+              key={`white-${activeTab}`}
+              side={isFunction ? 'left' : 'right'}
+              content={infoContent[activeTab]}
+              animation={slideVariant(isFunction ? 'left' : 'right')}
+            />
+          </AnimatePresence>
+
+          <AnimatePresence mode='wait'>
+            <BlackCard
+              key={`black-${activeTab}`}
+              side={isFunction ? 'right' : 'left'}
+              subTabs={subTabs[activeTab]}
+              activeSubTab={activeSubTab}
+              setActiveSubTab={setActiveSubTab}
+              animation={slideVariant(isFunction ? 'right' : 'left')}
+            />
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );

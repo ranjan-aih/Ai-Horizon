@@ -3,7 +3,7 @@ import AIHAgentTab from './cards/AIHAgentTab';
 const AIHAgents = () => {
   return (
     <div
-      className='w-screen h-[832px] flex justify-center items-center'
+      className='w-full h-[832px] flex justify-center items-center'
       style={{
         backgroundImage: 'url("/AIH-AgentsBg.svg")',
         backgroundRepeat: 'no-repeat',
@@ -14,7 +14,7 @@ const AIHAgents = () => {
       <div className='flex justify-between items-center w-[1280px] h-[832px] space-x-10'>
         {/* Left content */}
         <div className='flex flex-col justify-center items-center w-[345px] h-[552px] gap-5'>
-          <div className='w-full h-[180px] text-[51px] flex flex-col justify-center items-center font-roboto'>
+          <div className='w-full h-[180px] text-[51px] flex flex-col justify-center items-center font-roboto gap-0 leading-tight'>
             <h2 className='font-bold text-[#17BCBC] text-center leading-tight'>
               AI<span className='text-orange-400'>H</span> Agents
             </h2>
