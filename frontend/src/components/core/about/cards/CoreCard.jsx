@@ -6,14 +6,14 @@ function CoreCard(props) {
       <motion.div 
         whileHover={{
           rotate: -10,
-          x: 15,
-          y: -15,
+          x: 35,
+          y: -45,
         }}
         transition={{
-          duration: 0.5,
+          duration: 1,
         }}
         key={index}
-        className='w-[270px] h-[360px] border-[0.9px] rounded-[13.5px] bg-[#202020] text-white shadow-md flex flex-col items-center justify-center'
+        className='w-[270px] h-[360px] border-[0.9px] rounded-[13.5px] bg-[#202020] text-white shadow-md flex flex-col items-center justify-center '
       >
         <div className='w-[152.1px] flex flex-col  justify-between gap-[11.7px]'>
           <div className='w-[152.1px] h-33px text-[#F6A11F] text-[27.9px] font-semibold text-center leading-none tracking-normal'>

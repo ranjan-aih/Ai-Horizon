@@ -1,4 +1,4 @@
-const LogoBelt = ({ direction = 'left', logos = [] }) => {
+function LogoBeltRight({ direction, logos = [] }) {
   return (
     <div className="w-full overflow-hidden py-8">
       <style>
@@ -11,11 +11,11 @@ const LogoBelt = ({ direction = 'left', logos = [] }) => {
             0% { transform: translateX(-50%); }
             100% { transform: translateX(0); }
           }
-          .scroll-animation {
+          .scroll-animation-right {
             display: flex;
             gap: 16px;
             width: max-content;
-            animation: ${direction === 'left' ? 'scrollLeft' : 'scrollRight'} 50s linear infinite;
+            animation: ${direction === 'right' ? 'scrollRight' : "scrollLeft"} 50s linear infinite;
           }
           .logo-item {
             transition: all 0.3s ease;
@@ -37,7 +37,7 @@ const LogoBelt = ({ direction = 'left', logos = [] }) => {
           }
         `}
       </style>
-      <div className="scroll-animation">
+      <div className="scroll-animation-right">
         {[...logos, ...logos, ...logos].map((logo, index) => (
           <div key={index} className="flex items-center gap-3 whitespace-nowrap flex-shrink-0 logo-item cursor-pointer">
             {logo.type === 'google' ? (
@@ -83,6 +83,6 @@ const LogoBelt = ({ direction = 'left', logos = [] }) => {
       </div>
     </div>
   );
-};
+}
 
-export default LogoBelt;
+export default LogoBeltRight
