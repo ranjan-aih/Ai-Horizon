@@ -20,7 +20,7 @@ const Navbar = () => {
           <img
             src={aih_logo_light}
             alt='logo'
-            className='w-[117px] h-[40px] object-cover overflow-hidden '
+            className='w-[118px] h-[40px] object-contain overflow-hidden '
           />
         </NavLink>
 
